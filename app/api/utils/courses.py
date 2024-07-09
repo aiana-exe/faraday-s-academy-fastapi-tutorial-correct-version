@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 
-from db.models.course import Course
-from pydantic_schemas.course import CourseCreate
+from app.db.models.course import Course
+from app.pydantic_schemas.course import CourseCreate
 
 
 def get_course(db: Session, course_id: int):

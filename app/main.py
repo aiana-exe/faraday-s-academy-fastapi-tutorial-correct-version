@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends
 
-from api import users, courses, sections
-from db.db_setup import engine, get_db
-from db.models import user, course
+from app.api import users, courses, sections
+from app.db.db_setup import engine, get_db
+from app.db.models import user, course
 
 from sqlalchemy.ext.asyncio import AsyncSession
 

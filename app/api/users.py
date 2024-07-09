@@ -6,11 +6,11 @@ from fastapi import Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from db.db_setup import get_db, async_get_db
-from pydantic_schemas.user import UserCreate, User
-from pydantic_schemas.course import Course
-from api.utils.users import get_user, get_user_by_email, get_users, create_user
-from api.utils.courses import get_user_courses
+from app.db.db_setup import get_db, async_get_db
+from app.pydantic_schemas.user import UserCreate, User
+from app.pydantic_schemas.course import Course
+from app.api.utils.users import get_user, get_user_by_email, get_users, create_user
+from app.api.utils.courses import get_user_courses
 
 router = fastapi.APIRouter()
 

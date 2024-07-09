@@ -5,8 +5,10 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 
 
-SQLALCHEMY_DATABASE_URL = "postgresql+psycopg2://postgres:postgrespass@localhost:5432/faraday"
-ASYNC_SQLALCHEMY_DATABASE_URL = "postgresql+asyncpg://postgres:postgrespass@localhost:5432/faraday"    
+# SQLALCHEMY_DATABASE_URL = "postgresql+psycopg2://postgres:postgrespass@db:5432/faraday"
+
+SQLALCHEMY_DATABASE_URL = "postgresql+psycopg2://docker_faraday_project:123456@db:5432/faraday"
+ASYNC_SQLALCHEMY_DATABASE_URL = "postgresql+asyncpg://docker_faraday_project:123456@db:5432/faraday"    
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={}, future=True

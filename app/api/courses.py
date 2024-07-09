@@ -4,9 +4,9 @@ import fastapi
 from fastapi import Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from db.db_setup import get_db
-from pydantic_schemas.course import Course, CourseCreate
-from api.utils.courses import get_course, get_courses, create_course
+from app.db.db_setup import get_db
+from app.pydantic_schemas.course import Course, CourseCreate
+from app.api.utils.courses import get_course, get_courses, create_course
 
 router = fastapi.APIRouter()
 
